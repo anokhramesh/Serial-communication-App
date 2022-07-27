@@ -1,0 +1,58 @@
+Default path and location-
+C:\Users\user\source\repos\Arduino GUI\Arduino GUI\bin\Debug
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Arduino_GUI
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            serialPort1.Open();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnButton_Click(object sender, EventArgs e)
+        {
+            //send command to Arduino to turn pin 13 HIGH
+            serialPort1.Write("A");
+           // display the status of LED
+            label2.Text = "LED Status is ON ";
+
+        }
+
+        private void OffButton_Click(object sender, EventArgs e)
+        {
+            //send command to Arduino to turn pin 13 LOW
+            serialPort1.Write("a");
+            // display the status of LED
+            label2.Text = "LED Status is OFF";
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
