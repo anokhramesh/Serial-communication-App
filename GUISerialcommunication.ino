@@ -11,7 +11,7 @@ void loop()
   if (Serial.available())// checking any data is available is available on serial
   {
     data = Serial.readString();// serialdata will store to data variable
-    d1 = data.charAt(0);//di variable will store the character available
+    d1 = data.charAt(0);//d1 variable will store the character available
     if (d1 == 'A') {// if caracter is capital A- turn ON the LED
       digitalWrite(13, HIGH);
     }
